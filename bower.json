@@ -1,0 +1,17 @@
+{
+  "name": "explore-the-world",
+  "description": "This SPA is your chance to explore the countries of the world. Need a knowledge boost, explore and enjoy",
+  "main": "index.js",
+  "authors": [
+    "Team Gargoyle"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/Team-Gargoyle/Explore-The-World",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
