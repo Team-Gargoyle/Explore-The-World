@@ -8,8 +8,10 @@ SystemJS.config({
         //for HTML rendering:
         'handlebars': '../node_modules/handlebars/dist/handlebars.js',
         //UI for tabs, autocomplete, calendar otr else
-        'jqueryUi': '../node_modules/jquery-ui-dist/jquery-ui.js'
+        'jqueryUi': '../node_modules/jquery-ui-dist/jquery-ui.js',
 
+        //for routing
+        'navigo': '../node_modules/navigo/lib/navigo.js'
         //'main': './app-modules/main.js',
         //'data': './app-modules/data.js',
         //'utils': './app-modules/utils.js',
