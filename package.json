@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/Team-Gargoyle/Explore-The-World/issues"
   },
-  "homepage": "https://github.com/Team-Gargoyle/Explore-The-World#readme"
+  "homepage": "https://github.com/Team-Gargoyle/Explore-The-World#readme",
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "systemjs": "^0.20.12",
+    "systemjs-plugin-babel": "0.0.21"
+  }
 }
