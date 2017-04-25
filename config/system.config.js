@@ -9,7 +9,7 @@ SystemJS.config({
         'handlebars': '../node_modules/handlebars/dist/handlebars.js',
         //UI for tabs, autocomplete, calendar otr else
         'jqueryUi': '../node_modules/jquery-ui-dist/jquery-ui.js',
-        "bootstrap": "../node-modules/bootstrap/dist/js/bootstrap.min.js",
+        "bootstrap": "../node_modules/bootstrap/dist/js/bootstrap.min.js",
 
         //for routing
         'navigo': '../node_modules/navigo/lib/navigo.js',
@@ -17,8 +17,9 @@ SystemJS.config({
         "index": "../app-modules/index.js",
         "templates": "../app-modules/templates.js",
         "homeController": "../controllers/homeController.js",
-        //'main': './app-modules/main.js',
-        //'data': './app-modules/data.js',
+        "luckyController": '../controllers/luckyController.js',
+        'regionController': '../controllers/regionController.js',
+        'atozController': '../controllers/atozController.js',
         //'utils': './app-modules/utils.js',
         //'seed-data': './app-modules/seed-data.js',
         //'person-component': './app-modules/person-component.js'

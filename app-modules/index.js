@@ -1,21 +1,21 @@
 import 'jquery';
 import {templates} from 'templates';
-import {registerController} from 'registerController';
-import {loginController} from 'loginController';
-import {logoutController} from 'logoutController';
-import {userController} from 'userController';
+
 import {homeController} from 'homeController';
-import {changePasswordController} from 'changePasswordController';
-import {editProfileController} from 'editProfileController';
+import {regionController} from 'regionController';
+import {atozController} from 'atozController';
+import {luckyController} from 'luckyController';
 
 const router = new Navigo(null, false, '#!');
 
 router
-    .on(() => homeController())
+    //.on(() => homeController())
     .on({
         '/home': () => homeController(),
+        '/regions': () => regionController(),
+        '/atoz': () => atozController(),
+        '/lucky': () => luckyController(),
     })
-    .notFound(() => templates.getPage('notFound', {}))
     .resolve();
 
 // const ref = firebase.database().ref();
