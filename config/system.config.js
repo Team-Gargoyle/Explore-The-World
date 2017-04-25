@@ -9,9 +9,14 @@ SystemJS.config({
         'handlebars': '../node_modules/handlebars/dist/handlebars.js',
         //UI for tabs, autocomplete, calendar otr else
         'jqueryUi': '../node_modules/jquery-ui-dist/jquery-ui.js',
+        "bootstrap": "../node-modules/bootstrap/dist/js/bootstrap.min.js",
 
         //for routing
-        'navigo': '../node_modules/navigo/lib/navigo.js'
+        'navigo': '../node_modules/navigo/lib/navigo.js',
+
+        "index": "../app-modules/index.js",
+        "templates": "../app-modules/templates.js",
+        "homeController": "../controllers/homeController.js",
         //'main': './app-modules/main.js',
         //'data': './app-modules/data.js',
         //'utils': './app-modules/utils.js',
