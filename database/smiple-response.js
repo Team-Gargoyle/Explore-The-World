@@ -18,7 +18,7 @@
         "nativeName": "България",
         "numericCode": "100",
         "currencies": [{
-            "code": "BGN",
+            "code": "BGN", //this main
             "name": "Bulgarian lev",
             "symbol": "лв"
         }],
