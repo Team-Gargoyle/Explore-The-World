@@ -1,4 +1,4 @@
-import {templates} from 'templates';
+import { templates } from 'templates';
 import 'bootstrap';
 
 const regionController = function () {
@@ -6,4 +6,4 @@ const regionController = function () {
         .done();
 };
 
-export {regionController};
+export { regionController };

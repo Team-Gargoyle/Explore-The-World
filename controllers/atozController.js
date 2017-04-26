@@ -1,4 +1,4 @@
-import {templates} from 'templates';
+import { templates } from 'templates';
 import 'bootstrap';
 
 const atozController = function () {
@@ -6,4 +6,4 @@ const atozController = function () {
         .done();
 };
 
-export {atozController};
+export { atozController };

@@ -1,4 +1,4 @@
-import {templates} from 'templates';
+import { templates } from 'templates';
 import 'bootstrap';
 
 const luckyController = function () {
@@ -6,4 +6,4 @@ const luckyController = function () {
         .done();
 };
 
-export {luckyController};
+export { luckyController };

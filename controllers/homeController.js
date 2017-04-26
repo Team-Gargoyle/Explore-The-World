@@ -1,4 +1,4 @@
-import {templates} from 'templates';
+import { templates } from 'templates';
 import 'bootstrap';
 
 const homeController = function () {
@@ -6,4 +6,4 @@ const homeController = function () {
         .done();
 };
 
-export {homeController};
+export { homeController };
