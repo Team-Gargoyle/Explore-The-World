@@ -16,4 +16,5 @@ router
         '/atoz': () => atozController(),
         '/lucky': () => luckyController(),
     })
+    .notFound(() => templates.getPage('error404', {}))
     .resolve();

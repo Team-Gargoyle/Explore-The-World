@@ -1,3 +1,5 @@
+import 'jquery';
+
 const countriesDatabase = (function () {
     const MAIN_API_URL = `https://restcountries.eu/rest/v2`;
 
@@ -59,13 +61,13 @@ const bulgaria = `bulgaria`;
 //        .catch(err => reject(error));
 
 
-countriesDatabase.getCountriesByRegion(asiaCountries)
-    .then(countries => {
-        countries.forEach(count => {
-            console.log(`${count.name} : ${count.population}`);
-        });
-    })
-    .catch(err => reject(error));
+//countriesDatabase.getCountriesByRegion(asiaCountries)
+//    .then(countries => {
+//        countries.forEach(count => {
+//            console.log(`${count.name} : ${count.population}`);
+//        });
+//    })
+//    .catch(err => reject(error));
 
 
 //countriesDatabase.getAllCountries()
@@ -75,6 +77,13 @@ countriesDatabase.getCountriesByRegion(asiaCountries)
 //        });
 //    })
 //    .catch(err => reject(error));
+
+
+
+export { countriesDatabase };
+
+
+
 
 
 //-----------------------------------------------------------------------
