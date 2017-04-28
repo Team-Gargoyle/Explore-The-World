@@ -4,7 +4,7 @@ SystemJS.config({
         //systemJS
         "plugin-babel": "../node_modules/systemjs-plugin-babel/plugin-babel.js",
         "systemjs-babel-build": "../node_modules/systemjs-plugin-babel/systemjs-babel-browser.js",
-        
+
         //jquery
         "jquery": "../node_modules/jquery/dist/jquery.js",
         //for HTML rendering:
@@ -24,6 +24,8 @@ SystemJS.config({
         "luckyController": "../controllers/luckyController.js",
         "regionController": "../controllers/regionController.js",
         "atozController": "../controllers/atozController.js",
+        "registerController": "../controllers/registerController.js",
+        "loginController": "../controllers/loginController.js",
 
         //database
         "countriesDatabase": "../database/countriesDatabase.js"

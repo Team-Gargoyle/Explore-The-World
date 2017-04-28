@@ -23,6 +23,7 @@
     "jquery-ui-dist": "^1.12.1",
     "navigo": "^4.6.2",
     "systemjs": "^0.20.12",
-    "systemjs-plugin-babel": "0.0.21"
+    "systemjs-plugin-babel": "0.0.21",
+    "toastr": "^2.1.2"
   }
 }
