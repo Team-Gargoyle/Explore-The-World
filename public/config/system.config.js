@@ -11,9 +11,9 @@ SystemJS.config({
         "handlebars": "../node_modules/handlebars/dist/handlebars.js",
 
         //UI for tabs, autocomplete, calendar otr else
-        "jqueryUi": "../node_modules/jquery-ui-dist/jquery-ui.js",
+        
+        "jqueryUI": "../node_modules/jquery-ui-dist/jquery-ui.js",
         "bootstrap": "../node_modules/bootstrap/dist/js/bootstrap.min.js",
-
         //for routing
         "navigo": "../node_modules/navigo/lib/navigo.js",
 

@@ -1,4 +1,5 @@
 import 'jquery';
+
 import {templates} from 'templates';
 import {regionTemplate} from 'regionTemplate';
 
