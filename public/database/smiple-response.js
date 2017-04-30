@@ -5,13 +5,13 @@
         "alpha2Code": "BG",
         "alpha3Code": "BGR",  //this
         "callingCodes": ["359"], //this
-        "capital": "Sofia", //this
+        "capital": "Sofia", //this main
         "altSpellings": ["BG", "Republic of Bulgaria", "Република България"],
-        "region": "Europe", //this main
+        "region": "Europe", //this
         "population": 7153784, //this main
         "latlng": [43.0, 25.0],
         "demonym": "Bulgarian",
-        "area": 110879.0, //this
+        "area": 110879.0, //this main
         "gini": 28.2,
         "timezones": ["UTC+02:00"], //this
         "borders": ["GRC", "MKD", "ROU", "SRB", "TUR"],

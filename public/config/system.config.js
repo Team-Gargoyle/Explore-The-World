@@ -20,10 +20,22 @@ SystemJS.config({
         //App files
         "index": "../app-modules/index.js",
         "templates": "../app-modules/templates.js",
+        "regionTemplate": "../app-modules/regionTemplate.js",
+        
         "homeController": "../controllers/homeController.js",
-        "luckyController": "../controllers/luckyController.js",
+
+        //regionControllers
         "regionController": "../controllers/regionController.js",
+        "europeController": "../controllers/europeController.js",
+        "asiaController": "../controllers/asiaController.js",
+        "africaController": "../controllers/africaController.js",
+        "oceaniaController": "../controllers/oceaniaController.js",
+        "americasController": "../controllers/americasController.js",
+
+        "luckyController": "../controllers/luckyController.js",
+        
         "atozController": "../controllers/atozController.js",
+
         "registerController": "../controllers/registerController.js",
         "loginController": "../controllers/loginController.js",
 
