@@ -1,9 +1,9 @@
 import { templates } from 'templates';
 import 'bootstrap';
 
-const luckyController = function () {
+const mapsController = function () {
     templates.getPage('lucky', {})
         .done();
 };
 
-export { luckyController };
+export { mapsController };

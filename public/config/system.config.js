@@ -32,7 +32,7 @@ SystemJS.config({
         "oceaniaController": "../controllers/oceaniaController.js",
         "americasController": "../controllers/americasController.js",
 
-        "luckyController": "../controllers/luckyController.js",
+        "mapsController": "../controllers/mapsController.js",
         
         "atozController": "../controllers/atozController.js",
 

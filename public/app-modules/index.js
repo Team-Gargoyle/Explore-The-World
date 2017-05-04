@@ -14,7 +14,7 @@ import {americasController} from 'americasController';
 import {europeController} from 'europeController';
 
 import {atozController} from 'atozController';
-import {luckyController} from 'luckyController';
+import {mapsController} from 'mapsController';
 
 //User
 import {registerController} from 'registerController';
@@ -35,7 +35,7 @@ router
     .on({
         '/home': () => homeController(),
         '/atoz': () => atozController(),
-        '/lucky': () => luckyController(),
+        '/maps': () => mapsController(),
         '/register': () => registerController(),
         '/login': () => loginController(),
     })
