@@ -10,20 +10,34 @@ const asiaController = function () {
     countriesDatabase.getCountriesByRegion(asiaCountries)
         .then(countries => {
             countries.forEach(count => {
+                let flag = count.flag;
                 let name = count.name;
+                //second container
                 let capital = count.capital;
                 let population = count.population;
                 let currency = count.currencies[0].code;
                 let area = count.area;
-                let flag = count.flag;
+                let alpha3Code = count.alpha3Code;
+                //third container
+                let topLevelDomain = count.topLevelDomain[0];
+                let callingCodes = count.callingCodes[0];
+                let timezones = count.timezones[0];
+                let region = count.region;
+                let borders = count.borders;
 
                 let cObj = {
+                    flag: flag,
                     name: name,
                     capital: capital,
                     population: population,
                     currency: currency,
                     area: area,
-                    flag: flag
+                    alpha3Code: alpha3Code,
+                    topLevelDomain: topLevelDomain,
+                    callingCodes: callingCodes,
+                    timezones: timezones,
+                    region: region,
+                    borders: borders
                 };
                 
                 loadCountries(cObj);

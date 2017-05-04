@@ -90,3 +90,26 @@
       min-height: 100px;
     }
 
+.country{
+  border: 1px solid #B7B7B3;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #F7F6F2;
+}
+
+.country img {
+  border-radius: 5px;
+}
+
+.flag {
+  text-align: center;
+}
+
+.country-info {
+    text-align: center;
+}
+
+.country-info h4 {
+  
+}

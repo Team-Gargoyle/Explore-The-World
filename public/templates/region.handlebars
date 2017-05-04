@@ -1,12 +1,22 @@
-<div class="col-sm-4">
-    <div class="well">
+<div class="row country">
+    <div class="col-sm-3 flag">
+        <img src="{{flag}}" width="150" height="120" alt="flag" />
+        <h4>Name: {{name}}</h4>
+    </div>
+    <div class="col-sm-4 country-info">
+        <p>Capital: <b>{{capital}}</b></p>
+        <p>Population: <b>{{population}}</b></p>
+        <p>Currency: <b>{{currency}}</b></p>
+        <p>Area: <b>{{area}} km<sup>2</sup></b></p>
+        <p>Alpha Code: <b>{{alpha3Code}}</b></p>
 
-        <img src="{{flag}}" width="50" height="50" alt="flag" />
-        
-        <p>NAME: {{name}}</p>
-        <p>CAPITAL CITY: {{capital}}</p>
-        <p>POPULATION: {{population}}</p>
-        <p>CURRENCY: {{currency}}</p>
-        <p>AREA: {{area}} km2</p>
+    </div>
+    <div class="col-sm-4 country-info">
+        <p>Domain Name: <b>{{topLevelDomain}}</b></p>
+        <p>Calling Code: <b>({{callingCodes}})</b></p>
+        <p>Timezones: <b>{{timezones}}</b></p>
+        <p>Region: <b>{{region}}</b></p>
+        <p>Borders: {{#if borders}} <b>{{borders}}</b></p>
+        {{else}}<b>no borders</b> {{/if}}
     </div>
 </div>
