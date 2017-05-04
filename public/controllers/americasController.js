@@ -23,7 +23,7 @@ const americasController = function () {
                 let callingCodes = count.callingCodes[0];
                 let timezones = count.timezones[0];
                 let region = count.region;
-                let borders = count.borders;
+                let nativeName = count.nativeName;
 
                 let cObj = {
                     flag: flag,
@@ -37,7 +37,7 @@ const americasController = function () {
                     callingCodes: callingCodes,
                     timezones: timezones,
                     region: region,
-                    borders: borders
+                    nativeName: nativeName
                 };
                 
                 loadCountries(cObj);
