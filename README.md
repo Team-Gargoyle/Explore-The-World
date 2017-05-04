@@ -4,7 +4,7 @@ This SPA is your chance to explore the countries of the world. Need a knowledge 
 
 ## TODO Features
 * Optimize countries loading in (regions) and (from a-z) - too slow now
-
+  Fixed
 * Add search on a-z page
 
 * Implement footer with (share) on it
@@ -18,6 +18,6 @@ This SPA is your chance to explore the countries of the world. Need a knowledge 
 * Refractoring code, folders, names, maybe add classes, UI
 
 * Implement User functionality(login, profile, logout, signin, signup)
-    * 6.1 add country to favorites at profile
+    * add country to favorites at profile
 
 * Unit Testing    

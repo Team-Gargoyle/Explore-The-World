@@ -8,6 +8,7 @@ const atozController = function () {
     var mainEl = document.getElementById('content');
         mainEl.innerHTML = '';
 
+    let allArray = [];
 
     countriesDatabase.getAllCountries()
         .then(countries => {
@@ -42,8 +43,11 @@ const atozController = function () {
                     nativeName: nativeName
                 };
                 
-                loadCountries(cObj);
-            }); 
+                allArray.push(cObj);
+                
+            });
+            
+            loadCountries(allArray);
         });
         //.catch(err => reject(error));
 };

@@ -4,8 +4,9 @@ import { countriesDatabase } from 'countriesDatabase';
 
 const americasController = function () {
     var mainEl = document.getElementById('content');
-        mainEl.innerHTML = '';
+    mainEl.innerHTML = '';
     const asiaCountries = `americas`;
+    let allArray = [];
 
     countriesDatabase.getCountriesByRegion(asiaCountries)
         .then(countries => {
@@ -39,17 +40,19 @@ const americasController = function () {
                     region: region,
                     nativeName: nativeName
                 };
-                
-                loadCountries(cObj);
+
+                allArray.push(cObj);
+
             });
 
-            
+            loadCountries(allArray);
+
         });
-        //.catch(err => reject(error));
+    //.catch(err => reject(error));
 };
 
-function loadCountries (data) { 
-        regionTemplate.getPage('region', data);
+function loadCountries(data) {
+    regionTemplate.getPage('region', data);
 }
 
 export { americasController };

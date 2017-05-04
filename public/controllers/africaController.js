@@ -7,6 +7,7 @@ const africaController = function () {
         mainEl.innerHTML = '';
     
     const asiaCountries = `africa`;
+    let allArray = [];
 
     countriesDatabase.getCountriesByRegion(asiaCountries)
         .then(countries => {
@@ -41,9 +42,10 @@ const africaController = function () {
                     nativeName: nativeName
                 };
                 
-                loadCountries(cObj);
+                allArray.push(cObj);
             });
 
+            loadCountries(allArray);
             
         });
         //.catch(err => reject(error));

@@ -6,6 +6,7 @@ const europeController = function () {
     var mainEl = document.getElementById('content');
         mainEl.innerHTML = '';
     const asiaCountries = `europe`;
+    let allArray = [];
 
     countriesDatabase.getCountriesByRegion(asiaCountries)
         .then(countries => {
@@ -39,10 +40,12 @@ const europeController = function () {
                     region: region,
                     nativeName: nativeName
                 };
-                
-                loadCountries(cObj);
-            });
 
+                allArray.push(cObj);
+                
+            });
+            
+            loadCountries(allArray);
             
         });
         //.catch(err => reject(error));
