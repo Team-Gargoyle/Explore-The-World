@@ -110,4 +110,12 @@
     text-align: center;
 }
 
-
+#map{
+	display: border-box;
+	position:relative;
+	width:80%;
+	height:500px;
+	border: 1px solid black;
+	border-radius: 5px;
+	margin: 10px auto 250px;
+}

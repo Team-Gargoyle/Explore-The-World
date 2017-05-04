@@ -4,16 +4,14 @@ This SPA is your chance to explore the countries of the world. Need a knowledge 
 
 ## TODO Features
 * Optimize countries loading in (regions) and (from a-z) - too slow now
-  Fixed
+    *I think FIXED
+
 * Add search on a-z page
 
 * Implement footer with (share) on it
-
+    
 * Create maps page
-    * map will show center of the world at start
-    * user clicks feeling lucky button
-    * get random coordinates from database 
-    * display map of random country
+    *Partially ready, need some adjustments
 
 * Refractoring code, folders, names, maybe add classes, UI
 
