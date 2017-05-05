@@ -113,9 +113,15 @@
 #map{
 	display: border-box;
 	position:relative;
-	width:80%;
+	width:90%;
 	height:500px;
 	border: 1px solid black;
 	border-radius: 5px;
-	margin: 10px auto 250px;
+	margin: 0;
+}
+
+select {
+  width: 90%;
+  border: 1px solid lightskyblue;
+  margin: 0px auto 0px;
 }

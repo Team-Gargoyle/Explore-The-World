@@ -1,61 +1,3 @@
-// import { templates } from 'templates';
-// import 'bootstrap';
-// import 'jquery';
-// import { countriesDatabase } from 'countriesDatabase';
-
-// const mapsController = function () {
-//     var mainEl = document.getElementById('content');
-//     mainEl.innerHTML = '';
-
-//     mainEl.innerHTML = `
-//         <select name="sweets" size ="3">
-//         <option selected="selected">bulgaria</option>
-//         <option>romania</option>
-//         <option>france</option>
-//         <option>germany</option>
-//         </select>
-//         <div id="div-selected">
-//             <img id="selected-country" />
-//         </div>`;
-
-//     $("select")
-//         .change(function () {
-//             var str = "";
-//             $("select option:selected").each(function () {
-//                 str += $(this).text() + " ";
-//             });
-//             //console.log(str);
-
-//         countriesDatabase.getCountryByName(str)
-//         .then(countries => { //because is Array of one object
-//             countries.forEach(count => {
-//                 let lat = count.latlng[0],
-//                     lng = count.latlng[1];
-
-//                 //console.log(lat + ' ' + lng);  
-//                 createImg(lat, lng);
-//             });
-            
-//         });
-        
-//         })
-//         .change();  
-// };
-
-// function createImg (lat, lng) {
-//     var img = document.getElementById('selected-country');
-//     img.src = `http://maps.googleapis.com/maps/api/staticmap?center=${lat},${lng} 
-//         &zoom=7
-//         &size=900x900
-//         &sensor=false`; 
-
-//     return img;
-// }
-
-
-
-// export { mapsController };
-
 import { templates } from 'templates';
 import 'bootstrap';
 import 'jquery';
@@ -63,18 +5,70 @@ import { countriesDatabase } from 'countriesDatabase';
 
 const mapsController = function () {
     var mainEl = document.getElementById('content');
-    mainEl.innerHTML = '';
-
     mainEl.innerHTML = `
-        <select name="sweets" size ="3">
-        <option selected="selected">bulgaria</option>
-        <option>romania</option>
-        <option>france</option>
-        <option>germany</option>
+    <div class="row">
+    <div class="col-sm-2">
+        <select name="countries" size ="20">
+        
+        <option>Afghanistan</option><option>Åland Islands</option><option>Albania</option><option>Algeria</option><option>American Samoa</option>
+        <option>Andorra</option><option>Angola</option><option>Anguilla</option><option>Antarctica</option><option>Antigua and Barbuda</option>
+        <option>Argentina</option><option>Armenia</option><option>Aruba</option><option>Australia</option><option>Austria</option>
+        <option>Azerbaijan</option><option>Bahamas</option><option>Bahrain</option><option>Bangladesh</option><option>Barbados</option>
+        <option>Belarus</option><option>Belgium</option><option>Belize</option><option>Benin</option><option>Bermuda</option>
+        <option>Bhutan</option><option>Bolivia</option><option>Bonaire, Sint Eustatius and Saba</option><option>Bosnia and Herzegovina</option><option>Botswana</option>
+        <option>Bouvet Island</option><option>Brazil</option><option>British Indian Ocean Territory</option><option>Virgin Islands (British)</option><option>Virgin Islands (U.S.)</option>
+        <option>Brunei Darussalam</option> <option selected="selected">Bulgaria</option> <option>Burkina Faso</option> <option>Burundi</option> <option>Cambodia</option> 
+        <option>Cameroon</option> <option>Canada</option> <option>Cabo Verde</option> <option>Cayman Islands</option> <option>Central African Republic</option> 
+        <option>Chad</option> <option>Chile</option> <option>China</option><option>Christmas Island</option> <option>Cocos (Keeling) Islands</option> 
+        <option>Colombia</option> <option>Comoros</option> <option>Congo</option> <option>Congo (Democratic Republic of the)</option> <option>Cook Islands</option> 
+        <option>Costa Rica</option> <option>Croatia</option> <option>Cuba</option> <option>Curaçao</option> <option>Cyprus</option> 
+        <option>Czech Republic</option> <option>Denmark</option> <option>Djibouti</option> <option>Dominica</option> <option>Dominican Republic</option> 
+        <option>Ecuador</option> <option>Egypt</option> <option>El Salvador</option> <option>Equatorial Guinea</option> <option>Eritrea</option> 
+        <option>Estonia</option> <option>Ethiopia</option> <option>Falkland Islands (Malvinas)</option> <option>Faroe Islands</option> <option>Fiji</option> 
+        <option>Finland</option> <option>France</option> <option>French Guiana</option> <option>French Polynesia</option> <option>French Southern Territories</option> 
+        <option>>Gambia</option><option>Georgia</option><option>Germany</option><option>Ghana</option><option>Gibraltar</option>
+        <option>Greece</option><option>Greenland</option><option>Grenada</option><option>Guadeloupe</option><option>Guam</option>
+        <option>Guatemala</option><option>Guernsey</option><option>Guinea</option><option>Guinea-Bissau</option><option>Guyana</option>
+        <option>Haiti</option><option>Heard Island and McDonald Islands</option><option>Holy See</option><option>Honduras</option><option>Hong Kong</option>
+        <option>Hungary</option><option>Iceland</option><option>India</option><option>Indonesia</option><option>Côte d'Ivoire</option>
+        <option>Iran (Islamic Republic of)</option><option>Iraq</option><option>Ireland</option><option>Isle of Man</option><option>Israel</option>
+        <option>Italy</option><option>Jamaica</option><option>Japan</option><option>Jersey</option><option>Jordan</option>
+        <option>Kazakhstan</option><option>Kenya</option><option>Kiribati</option><option>Kuwait</option><option>Kyrgyzstan</option>
+        <option>Lao People's Democratic Republic</option><option>Latvia</option><option>Lebanon</option><option>Lesotho</option><option>Liberia</option>
+        <option>Libya</option><option>Liechtenstein</option><option>Lithuania</option><option>Luxembourg</option><option>Macao</option>
+        <option>Macedonia (the former Yugoslav Republic of)</option><option>Madagascar</option><option>Malawi</option><option>Malaysia</option><option>Maldives</option>
+        <option>Mali</option><option>Malta</option><option>Marshall Islands</option><option>Martinique</option><option>Mauritania</option>
+        <option>Mauritius</option><option>Mayotte</option><option>Mexico</option><option>Micronesia (Federated States of)</option><option>Moldova (Republic of)</option>
+        <option>Monaco</option><option>Mongolia</option><option>Montenegro</option><option>Montserrat</option><option>Morocco</option>
+        <option>Mozambique</option><option>Myanmar</option><option>Namibia</option><option>Nauru</option><option>Nepal</option>
+        <option>Netherlands</option><option>New Caledonia</option><option>New Zealand</option><option>Nicaragua</option><option>Niger</option>
+        <option>Nigeria</option><option>Niue</option><option>Norfolk Island</option><option>Korea (Democratic People's Republic of)</option><option>Northern Mariana Islands</option>
+        <option>Norway</option><option>Oman</option><option>Pakistan</option><option>Palau</option><option>Palestine, State of</option>
+        <option>Panama</option><option>Papua New Guinea</option><option>Paraguay</option><option>Peru</option><option>Philippines</option>
+        <option>Pitcairn</option><option>Poland</option><option>Portugal</option><option>Puerto Rico</option><option>Qatar</option>
+        <option>Republic of Kosovo</option><option>Réunion</option><option>Romania</option><option>Russian Federation</option><option>Rwanda</option>
+        <option>Saint Barthélemy</option><option>Saint Helena, Ascension and Tristan da Cunha</option><option>Saint Kitts and Nevis</option><option>Saint Lucia</option><option>Saint Martin (French part)</option>
+        <option>Saint Pierre and Miquelon</option><option>Saint Vincent and the Grenadines</option><option>Samoa</option><option>San Marino</option><option>Sao Tome and Principe</option>
+        <option>Saudi Arabia</option><option>Senegal</option><option>Serbia</option><option>Seychelles</option><option>Sierra Leone</option>
+        <option>Singapore</option><option>Sint Maarten (Dutch part)</option><option>Slovakia</option><option>Slovenia</option><option>Solomon Islands</option>
+        <option>Somalia</option><option>South Africa</option><option>South Georgia and the South Sandwich Islands</option><option>Korea (Republic of)</option><option>South Sudan</option>
+        <option>Spain</option><option>Sri Lanka</option><option>Sudan</option><option>Suriname</option><option>Svalbard and Jan Mayen</option>
+        <option>Swaziland</option><option>Sweden</option><option>Switzerland</option><option>Syrian Arab Republic</option><option>Taiwan, Province of China</option>
+        <option>Tajikistan</option><option>Tanzania, United Republic of</option><option>Thailand</option><option>Timor-Leste</option><option>Togo</option>
+        <option>Tokelau</option><option>Tonga</option><option>Trinidad and Tobago</option><option>Tunisia</option><option>Turkey</option>
+        <option>Turkmenistan</option><option>Turks and Caicos Islands</option> <option>Tuvalu</option><option>Uganda</option><option>Ukraine</option>
+        <option>United Arab Emirates</option><option>United Kingdom of Great Britain and Northern Ireland</option><option>United States of America</option><option>Uruguay</option><option>Uzbekistan</option>
+        <option>Vanuatu</option><option>Venezuela (Bolivarian Republic of)</option><option>Viet Nam</option><option>Wallis and Futuna</option><option>Western Sahara</option>
+        <option>Yemen</option><option>Zambia</option><option>Zimbabwe</option>
+
         </select>
-        <div id="map">
-            
-        </div>`;
+    </div>
+        <div class="col-sm-10">
+            <div id="map">
+                
+            </div>
+        </div>
+    </div>`;
 
     $("select")
         .change(function () {
@@ -84,30 +78,30 @@ const mapsController = function () {
             });
             //console.log(str);
 
-        countriesDatabase.getCountryByName(str)
-        .then(countries => { //because is Array of one object
-            countries.forEach(count => {
-                let lat = count.latlng[0],
-                    lng = count.latlng[1];
+            countriesDatabase.getCountryByName(str)
+                .then(countries => { //because is Array of one object
+                    countries.forEach(count => {
+                        let lat = count.latlng[0],
+                            lng = count.latlng[1];
 
-                //console.log(lat + ' ' + lng);  
-                myMap(lat, lng);
-            });
-            
-        });
-        
+                        //console.log(lat + ' ' + lng);  
+                        myMap(lat, lng);
+                    });
+
+                });
+
         })
-        .change();  
+        .change();
 };
 
 function myMap(lat, lng) {
-			var mapCanvas = document.getElementById("map");
-			var myCenter = new google.maps.LatLng(lat, lng);
-		
-			
-			var mapOptions = {center: myCenter, zoom: 6};
-			var map = new google.maps.Map(mapCanvas, mapOptions);
-		}
+    var mapCanvas = document.getElementById("map");
+    var myCenter = new google.maps.LatLng(lat, lng);
+
+
+    var mapOptions = { center: myCenter, zoom: 6 };
+    var map = new google.maps.Map(mapCanvas, mapOptions);
+}
 
 
 export { mapsController };
