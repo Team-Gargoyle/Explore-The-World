@@ -71,7 +71,7 @@
 }
 
 #main-footer {
-      background-color: #f1f1fb;
+      background-color: #fafafa;
       color: black;
       padding: 15px;
       margin-top: 10px;
@@ -119,4 +119,30 @@ select {
   font-size: 30px;
   width: 80%;
   margin: 100px auto 320px;
+}
+
+#forkme a {
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.8);
+    background: #dd0d0d;
+    color: #fff;
+    text-decoration: none;
+    font-family: arial,sans-serif;
+    text-align: center;
+    font-weight: bold;
+    padding: 5px 20px;
+    font-size: 20px;
+}
+#fbme{
+    margin-top: 10px;
+}
+#fbme a {
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.8);
+    background: #3b5999;
+    color: #fff;
+    text-decoration: none;
+    font-family: arial,sans-serif;
+    text-align: center;
+    font-weight: bold;
+    padding: 5px 20px;
+    font-size: 20px;
 }
