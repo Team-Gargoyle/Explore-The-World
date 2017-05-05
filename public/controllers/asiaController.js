@@ -1,16 +1,15 @@
-import { regionTemplate } from 'regionTemplate';
+import { templates } from 'templates';
 import 'bootstrap';
 import { countriesDatabase } from 'countriesDatabase';
 
 const asiaController = function () {
-    var mainEl = document.getElementById('content');
-        mainEl.innerHTML = '';
-    const asiaCountries = `asia`;
-    let allArray = [];
+    const region = `asia`;
+    let allCountriesArray = [];
 
-    countriesDatabase.getCountriesByRegion(asiaCountries)
+    countriesDatabase.getCountriesByRegion(region)
         .then(countries => {
             countries.forEach(country => {
+                //first container
                 let flag = country.flag;
                 let name = country.name;
                 //second container
@@ -41,19 +40,17 @@ const asiaController = function () {
                     nativeName: nativeName
                 };
                 
-                allArray.push(countryObj);
+                allCountriesArray.push(countryObj);
                 
             });
             
-            loadCountries(allArray);
-
-            
+            loadCountries(allCountriesArray); 
         });
         //.catch(err => reject(error));
 };
 
 function loadCountries (data) { 
-        regionTemplate.getPage('region', data);
+        templates.getPage('country', data);
 }
 
 export { asiaController };

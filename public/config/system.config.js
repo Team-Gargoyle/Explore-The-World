@@ -20,7 +20,6 @@ SystemJS.config({
         //App files
         "index": "../app-modules/index.js",
         "templates": "../app-modules/templates.js",
-        "regionTemplate": "../app-modules/regionTemplate.js",
         
         //Pages Controllers
         "homeController": "../controllers/homeController.js",

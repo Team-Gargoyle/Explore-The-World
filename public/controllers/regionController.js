@@ -9,9 +9,7 @@ const regionController = function () {
             $("#accordion").accordion({
                 collapsible: false
             });
-        }
-
-        );
+        });
 };
 
 export { regionController };

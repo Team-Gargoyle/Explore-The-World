@@ -72,24 +72,20 @@ const mapsController = function () {
 
     $("select")
         .change(function () {
-            var str = "";
+            var name = "";
             $("select option:selected").each(function () {
-                str += $(this).text() + " ";
+                name += $(this).text() + " ";
             });
             
-
-            countriesDatabase.getCountryByName(str)
+            countriesDatabase.getCountryByName(name)
                 .then(countries => { 
                     countries.forEach(country => {
                         let lat = country.latlng[0],
                             lng = country.latlng[1];
-
-                         
+ 
                         myMap(lat, lng);
                     });
-
                 });
-
         })
         .change();
 };
@@ -97,7 +93,6 @@ const mapsController = function () {
 function myMap(lat, lng) {
     var mapCanvas = document.getElementById("map");
     var myCenter = new google.maps.LatLng(lat, lng);
-
 
     var mapOptions = { center: myCenter, zoom: 6 };
     var map = new google.maps.Map(mapCanvas, mapOptions);

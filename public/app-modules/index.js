@@ -1,7 +1,7 @@
 import 'jquery';
 //Templates
 import {templates} from 'templates';
-import {regionTemplate} from 'regionTemplate';
+
 //Pages
 import {homeController} from 'homeController';
 import {regionController} from 'regionController';

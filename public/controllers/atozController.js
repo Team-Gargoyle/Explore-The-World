@@ -1,15 +1,9 @@
-import { regionTemplate } from 'regionTemplate';
 import { templates } from 'templates';
-
 import 'bootstrap';
 import { countriesDatabase } from 'countriesDatabase';
 
 const atozController = function () {
-    var mainEl = document.getElementById('content');
-        mainEl.innerHTML = '';
-    
-
-    let allArray = [];
+    let allCountriesArr = [];
 
     countriesDatabase.getAllCountries()
         .then(countries => {
@@ -44,17 +38,17 @@ const atozController = function () {
                     nativeName: nativeName
                 };
                 
-                allArray.push(countryObj);
+                allCountriesArr.push(countryObj);
                 
             });
             
-            loadCountries(allArray);
+            loadCountries(allCountriesArr);
         });
         //.catch(err => reject(error));
 };
 
 function loadCountries (data) { 
-        regionTemplate.getPage('region', data);
+        templates.getPage('country', data);
 }
 
 

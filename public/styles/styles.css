@@ -7,8 +7,6 @@
     text-align: center;
 }
 
-/* Makes images fully responsive */
-
 .img-responsive,
 .thumbnail > img,
 .thumbnail a > img,
@@ -18,8 +16,6 @@
   width: 100%;
   height: auto;
 }
-
-/* ------------------- Carousel Styling ------------------- */
 
 .carousel-inner {
   border-radius: 15px;
@@ -45,7 +41,6 @@
   width: 100%;
   z-index: 15;
   margin: 0;
-  
   text-align: center;
 }
 
@@ -53,9 +48,6 @@
 .carousel-control.right {
   background-image: none;
 }
-
-
-/* ------------------- Section Styling - Not needed for carousel styling ------------------- */
 
 .section-white {
    padding: 10px 0;
@@ -67,19 +59,15 @@
 }
 
 @media screen and (min-width: 768px) {
-
   .section-white {
      padding: 1.5em 0;
   }
-
 }
 
 @media screen and (min-width: 992px) {
-
   .container {
     max-width: 930px;
   }
-
 }
 
 #main-footer {

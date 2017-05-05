@@ -1,14 +1,12 @@
-import { regionTemplate } from 'regionTemplate';
+import { templates } from 'templates';
 import 'bootstrap';
 import { countriesDatabase } from 'countriesDatabase';
 
 const oceaniaController = function () {
-    var mainEl = document.getElementById('content');
-        mainEl.innerHTML = '';
-    const asiaCountries = `oceania`;
-    let allArray = [];
+    const region = `oceania`;
+    let allCountriesArray = [];
 
-    countriesDatabase.getCountriesByRegion(asiaCountries)
+    countriesDatabase.getCountriesByRegion(region)
         .then(countries => {
             countries.forEach(country => {
                 let flag = country.flag;
@@ -41,19 +39,16 @@ const oceaniaController = function () {
                     nativeName: nativeName
                 };
                 
-                allArray.push(countryObj);
+                allCountriesArray.push(countryObj);
                 
             });
-            
-            loadCountries(allArray);
-
-            
+            loadCountries(allCountriesArray); 
         });
         //.catch(err => reject(error));
 };
 
 function loadCountries (data) { 
-        regionTemplate.getPage('region', data);
+        templates.getPage('country', data);
 }
 
 export { oceaniaController };
