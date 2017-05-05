@@ -11,10 +11,10 @@ SystemJS.config({
         "handlebars": "../node_modules/handlebars/dist/handlebars.js",
 
         //UI for tabs, autocomplete, calendar otr else
-        
         "jqueryUI": "../node_modules/jquery-ui-dist/jquery-ui.js",
         "bootstrap": "../node_modules/bootstrap/dist/js/bootstrap.min.js",
-        //for routing
+
+        //for Routing
         "navigo": "../node_modules/navigo/lib/navigo.js",
 
         //App files
@@ -22,20 +22,20 @@ SystemJS.config({
         "templates": "../app-modules/templates.js",
         "regionTemplate": "../app-modules/regionTemplate.js",
         
+        //Pages Controllers
         "homeController": "../controllers/homeController.js",
-
-        //regionControllers
         "regionController": "../controllers/regionController.js",
+        "atozController": "../controllers/atozController.js",
+        "mapsController": "../controllers/mapsController.js",
+
+        //Regions Controllers
         "europeController": "../controllers/europeController.js",
         "asiaController": "../controllers/asiaController.js",
         "africaController": "../controllers/africaController.js",
         "oceaniaController": "../controllers/oceaniaController.js",
         "americasController": "../controllers/americasController.js",
 
-        "mapsController": "../controllers/mapsController.js",
-        
-        "atozController": "../controllers/atozController.js",
-
+        //User Controllers
         "registerController": "../controllers/registerController.js",
         "loginController": "../controllers/loginController.js",
 

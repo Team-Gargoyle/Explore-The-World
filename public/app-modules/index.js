@@ -1,20 +1,19 @@
 import 'jquery';
-
+//Templates
 import {templates} from 'templates';
 import {regionTemplate} from 'regionTemplate';
-
-//Homepage
+//Pages
 import {homeController} from 'homeController';
-//Regions
 import {regionController} from 'regionController';
+import {atozController} from 'atozController';
+import {mapsController} from 'mapsController';
+//Regions
+
 import {asiaController} from 'asiaController';
 import {africaController} from 'africaController';
 import {oceaniaController} from 'oceaniaController';
 import {americasController} from 'americasController';
 import {europeController} from 'europeController';
-
-import {atozController} from 'atozController';
-import {mapsController} from 'mapsController';
 
 //User
 import {registerController} from 'registerController';

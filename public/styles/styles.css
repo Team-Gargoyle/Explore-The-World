@@ -126,3 +126,9 @@ select {
   border: 1px solid lightskyblue;
   margin: 0px auto 0px;
 }
+
+.error{
+  font-size: 30px;
+  width: 80%;
+  margin: 100px auto 320px;
+}

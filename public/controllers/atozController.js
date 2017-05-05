@@ -7,28 +7,29 @@ import { countriesDatabase } from 'countriesDatabase';
 const atozController = function () {
     var mainEl = document.getElementById('content');
         mainEl.innerHTML = '';
+    
 
     let allArray = [];
 
     countriesDatabase.getAllCountries()
         .then(countries => {
-            countries.forEach(count => {
-                let flag = count.flag;
-                let name = count.name;
+            countries.forEach(country => {
+                let flag = country.flag;
+                let name = country.name;
                 //second container
-                let capital = count.capital;
-                let population = count.population;
-                let currency = count.currencies[0].code;
-                let area = count.area;
-                let alpha3Code = count.alpha3Code;
+                let capital = country.capital;
+                let population = country.population;
+                let currency = country.currencies[0].code;
+                let area = country.area;
+                let alpha3Code = country.alpha3Code;
                 //third container
-                let topLevelDomain = count.topLevelDomain[0];
-                let callingCodes = count.callingCodes[0];
-                let timezones = count.timezones[0];
-                let region = count.region;
-                let nativeName = count.nativeName;
+                let topLevelDomain = country.topLevelDomain[0];
+                let callingCodes = country.callingCodes[0];
+                let timezones = country.timezones[0];
+                let region = country.region;
+                let nativeName = country.nativeName;
 
-                let cObj = {
+                let countryObj = {
                     flag: flag,
                     name: name,
                     capital: capital,
@@ -43,7 +44,7 @@ const atozController = function () {
                     nativeName: nativeName
                 };
                 
-                allArray.push(cObj);
+                allArray.push(countryObj);
                 
             });
             

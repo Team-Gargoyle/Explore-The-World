@@ -76,15 +76,15 @@ const mapsController = function () {
             $("select option:selected").each(function () {
                 str += $(this).text() + " ";
             });
-            //console.log(str);
+            
 
             countriesDatabase.getCountryByName(str)
-                .then(countries => { //because is Array of one object
-                    countries.forEach(count => {
-                        let lat = count.latlng[0],
-                            lng = count.latlng[1];
+                .then(countries => { 
+                    countries.forEach(country => {
+                        let lat = country.latlng[0],
+                            lng = country.latlng[1];
 
-                        //console.log(lat + ' ' + lng);  
+                         
                         myMap(lat, lng);
                     });
 
