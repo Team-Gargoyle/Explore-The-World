@@ -7,8 +7,8 @@ const mapsController = function () {
     var mainEl = document.getElementById('content');
     mainEl.innerHTML = `
     <div class="row">
-    <div class="col-sm-2">
-        <select name="countries" size ="20">
+    <div class="col-sm-3">
+        <select name="countries" size ="20" autofocus>
         
         <option>Afghanistan</option><option>Åland Islands</option><option>Albania</option><option>Algeria</option><option>American Samoa</option>
         <option>Andorra</option><option>Angola</option><option>Anguilla</option><option>Antarctica</option><option>Antigua and Barbuda</option>
@@ -63,7 +63,7 @@ const mapsController = function () {
 
         </select>
     </div>
-        <div class="col-sm-10">
+        <div class="col-sm-9">
             <div id="map">
                 
             </div>

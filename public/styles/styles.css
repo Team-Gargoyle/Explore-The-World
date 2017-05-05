@@ -111,16 +111,17 @@
 }
 
 #map{
-	display: border-box;
+	display: block;
 	position:relative;
 	width:90%;
 	height:500px;
 	border: 1px solid black;
 	border-radius: 5px;
-	margin: 0;
+	margin: 0px auto 0px;
 }
 
 select {
+  display: block;
   width: 90%;
   border: 1px solid lightskyblue;
   margin: 0px auto 0px;
