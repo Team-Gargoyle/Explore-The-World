@@ -20,12 +20,17 @@ const usersDatabse = (function () {
         return firebase.auth().currentUser;
     }
 
+    function test () {
+        console.log('test');
+    }
+    
     return {
         register: register,
         login: login,
         logout: logout,
         onAuthStateChanged: onAuthStateChanged,
-        getUser: getUser
+        getUser: getUser,
+        test: test
     };
 
 }());
