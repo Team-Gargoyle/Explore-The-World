@@ -37,7 +37,9 @@ SystemJS.config({
         //User Controllers
         "registerController": "../controllers/registerController.js",
         "loginController": "../controllers/loginController.js",
-
+        "userController": "../controllers/userController.js",
+        "logoutController": "../controllers/logoutController.js",
+        
         //database
         "countriesDatabase": "../database/countriesDatabase.js"
     }

@@ -63,17 +63,16 @@
                         </div>
                     </div>
                 </form> -->
+
                 <!--right menu-->
                 <ul class="nav navbar-nav navbar-right">
-                    <!--<li><a href="#/signup" id="registerBtn"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                    <li><a href="#/login" id="loginBtn"><span class="glyphicon glyphicon-log-in"></span> Log In</a></li>-->
-
-                    <li>
-                        <a href="#/user" id="currentUser" class="hidden"></a>
-                    </li>
-                    <li><a href="#/home" id="logoutBtn" class="hidden"><strong>Log out</strong></a></li>
-                    <li><a href="#/login" id="loginBtn"><strong>Log in</strong></a></li>
-                    <li><a href="#/register" id="registerBtn"><strong>Register</strong></a></li>
+                    <!-- if USER not Logged -->
+                    <li><a href="#/login" id="loginBtn"><span class="glyphicon glyphicon-log-in"></span> Log In</a></li>
+                    <li><a href="#/register" id="registerBtn"><span class="glyphicon glyphicon-user"></span> Register</a></li>
+                    <!-- if USER is Logged -->        
+                    <li><a href="#/user" id="currentUser"><span class="glyphicon glyphicon-user"> Hello</span></a></li>
+                    <li><a href="#/home" id="logoutBtn" ><span class="glyphicon glyphicon-log-out"> Logout</span></a></li>
+                 
                 </ul>
             </div>
         </div>
