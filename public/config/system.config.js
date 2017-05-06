@@ -41,6 +41,8 @@ SystemJS.config({
         "logoutController": "../controllers/logoutController.js",
         
         //database
-        "countriesDatabase": "../database/countriesDatabase.js"
+        "countriesDatabase": "../database/countriesDatabase.js",
+
+        "toastr": "../node_modules/toastr/toastr.js"
     }
 });
