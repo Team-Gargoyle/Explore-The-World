@@ -18,6 +18,8 @@ import {europeController} from 'europeController';
 //User
 import {registerController} from 'registerController';
 import {loginController} from 'loginController';
+import {userController} from 'userController';
+import {logoutController} from 'logoutController';
 
 const router = new Navigo(null, false, '#!');
 
@@ -37,6 +39,8 @@ router
         '/maps': () => mapsController(),
         '/register': () => registerController(),
         '/login': () => loginController(),
+        '/user': () => userController(),
+        '/logout': () => logoutController(),
     })
     .notFound(() => templates.getPage('error404', {}))
     .resolve();

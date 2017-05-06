@@ -1,30 +1,40 @@
-//create User
+const usersDatabse = (function () {
 
-//var email = "myemail@email.com";
-//var password = "mypassword";
-//
-//firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
-//   console.log(error.code);
-//   console.log(error.message);
-//});
+    function register (email, password) { 
+        return firebase.auth().createUserWithEmailAndPassword(email, password);
+    }
 
-//Sign in User
+    function login (email, password) { 
+        return firebase.auth().signInWithEmailAndPassword(email, password);
+    }
 
-//var email = "myemail@email.com";
-//var password = "mypassword";
-//
-//firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
-//   console.log(error.code);
-//   console.log(error.message);
-//});
+    function logout () { 
+        return firebase.auth().signOut();
+    }
 
-//Sign Out User
+    function onAuthStateChanged(nextOrObserver, error, completed) {
+        return firebase.auth().onAuthStateChanged(nextOrObserver, error, completed);
+    }
 
-//firebase.auth().signOut().then(function() {
-//   console.log("Logged out!");
-//}, function(error) {
-//   console.log(error.code);
-//   console.log(error.message);
-//});
+    function getUser () {
+        return firebase.auth().currentUser;
+    }
 
-//TODO write it as IIFE and export with functions
+    function test () {
+        console.log('test');
+    }
+    
+    return {
+        register: register,
+        login: login,
+        logout: logout,
+        onAuthStateChanged: onAuthStateChanged,
+        getUser: getUser,
+        test: test
+    };
+
+}());
+
+
+export { usersDatabse };
+

@@ -20,11 +20,13 @@
     <script src="./node_modules/navigo/lib/navigo.js"></script>
     <script src="./node_modules/jquery/dist/jquery.js"></script>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
-
+    <script src="./node_modules/toastr/toastr.js"></script>
+    
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap-theme.css">
     <link rel="stylesheet" href="./node_modules/jquery-ui-dist/jquery-ui.css">
     <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./node_modules/toastr/package/toastr.css">
     <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
 
 
@@ -63,17 +65,16 @@
                         </div>
                     </div>
                 </form> -->
+
                 <!--right menu-->
                 <ul class="nav navbar-nav navbar-right">
-                    <!--<li><a href="#/signup" id="registerBtn"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                    <li><a href="#/login" id="loginBtn"><span class="glyphicon glyphicon-log-in"></span> Log In</a></li>-->
-
-                    <li>
-                        <a href="#/user" id="currentUser" class="hidden"></a>
-                    </li>
-                    <li><a href="#/home" id="logoutBtn" class="hidden"><strong>Log out</strong></a></li>
-                    <li><a href="#/login" id="loginBtn"><strong>Log in</strong></a></li>
-                    <li><a href="#/register" id="registerBtn"><strong>Register</strong></a></li>
+                    <!-- if USER not Logged -->
+                    <li><a href="#/login" id="loginBtn"><span class="glyphicon glyphicon-log-in"></span> Log In</a></li>
+                    <li><a href="#/register" id="registerBtn"><span class="glyphicon glyphicon-user"></span> Register</a></li>
+                    <!-- if USER is Logged -->        
+                    <li><a href="#/user" id="currentUser" class="hidden"><span class="glyphicon glyphicon-user"> Hello</span></a></li>
+                    <li><a href="#/home" id="logoutBtn" class="hidden"><span class="glyphicon glyphicon-log-out"> Logout</span></a></li>
+                 
                 </ul>
             </div>
         </div>
