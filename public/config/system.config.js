@@ -42,6 +42,7 @@ SystemJS.config({
         
         //database
         "countriesDatabase": "../database/countriesDatabase.js",
+        "usersDatabase": "../database/usersDatabase.js",
 
         "toastr": "../node_modules/toastr/toastr.js"
     }
