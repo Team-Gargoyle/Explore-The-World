@@ -1,9 +1,10 @@
 import {templates} from 'templates';
-import 'bootstrap';
 
-const userController = function () {
-        templates.getPage('user', {})
+const userController = function (user) {
+    if (user) {
+        templates.getPage('user', user)
         .done();
+    }
 };
 
-export { userController };
+export {userController};

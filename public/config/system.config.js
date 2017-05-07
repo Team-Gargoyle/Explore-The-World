@@ -39,11 +39,10 @@ SystemJS.config({
         "loginController": "../controllers/loginController.js",
         "userController": "../controllers/userController.js",
         "logoutController": "../controllers/logoutController.js",
-        
+
         //database
         "countriesDatabase": "../database/countriesDatabase.js",
-        "usersDatabase": "../database/usersDatabase.js",
-
+    
         "toastr": "../node_modules/toastr/toastr.js"
     }
 });

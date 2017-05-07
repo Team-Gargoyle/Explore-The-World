@@ -1,25 +1,40 @@
 import 'jquery';
 //Templates
-import {templates} from 'templates';
+import { templates } from 'templates';
 
 //Pages
-import {homeController} from 'homeController';
-import {regionController} from 'regionController';
-import {atozController} from 'atozController';
-import {mapsController} from 'mapsController';
-//Regions
+import { homeController } from 'homeController';
+import { regionController } from 'regionController';
+import { atozController } from 'atozController';
+import { mapsController } from 'mapsController';
 
-import {asiaController} from 'asiaController';
-import {africaController} from 'africaController';
-import {oceaniaController} from 'oceaniaController';
-import {americasController} from 'americasController';
-import {europeController} from 'europeController';
+//Regions
+import { asiaController } from 'asiaController';
+import { africaController } from 'africaController';
+import { oceaniaController } from 'oceaniaController';
+import { americasController } from 'americasController';
+import { europeController } from 'europeController';
 
 //User
-import {registerController} from 'registerController';
-import {loginController} from 'loginController';
-import {userController} from 'userController';
-import {logoutController} from 'logoutController';
+import { registerController } from 'registerController';
+import { loginController } from 'loginController';
+import { userController } from 'userController';
+import { logoutController } from 'logoutController';
+
+firebase.auth().onAuthStateChanged(function (user) {
+    if (user) {
+        let currentUser = {
+            'displayName': user.displayName,
+            'email': user.email,
+        };
+
+        $('#currentUser').removeClass('hidden').text(`Hello, ${currentUser.displayName}!`);
+        $('#logoutBtn').removeClass('hidden')
+            .on('click',  () => logoutController(currentUser));
+        $('#loginBtn').addClass('hidden');
+        $('#registerBtn').addClass('hidden');
+    }
+});
 
 const router = new Navigo(null, false, '#!');
 
@@ -32,15 +47,14 @@ router
         '/regions/oceania': () => oceaniaController(),
         '/regions/americas': () => americasController(),
         '/regions': () => regionController(),
-    })
-    .on({
         '/home': () => homeController(),
-        '/atoz': () => atozController(),
-        '/maps': () => mapsController(),
         '/register': () => registerController(),
         '/login': () => loginController(),
-        '/user': () => userController(),
         '/logout': () => logoutController(),
+        '/user': () => userController(),
+        '/atoz': () => atozController(),
+        '/maps': () => mapsController(),
+
     })
     .notFound(() => templates.getPage('error404', {}))
     .resolve();
