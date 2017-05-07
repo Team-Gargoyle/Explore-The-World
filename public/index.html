@@ -21,7 +21,7 @@
     <script src="./node_modules/jquery/dist/jquery.js"></script>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
     <script src="./node_modules/toastr/toastr.js"></script>
-    
+
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap-theme.css">
     <link rel="stylesheet" href="./node_modules/jquery-ui-dist/jquery-ui.css">
@@ -35,11 +35,22 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-default">
+    <div id="fb-root"></div>
+    <script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+    <nav class="navbar navbar-default main-nav">
         <!--container div-->
         <div class="container-fluid">
             <!-- navbar header -->
-            <div class="navbar-header">
+            <div class="navbar-header main-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -51,10 +62,10 @@
             <div class="collapse navbar-collapse" id="myNavbar">
                 <!--left menu-->
                 <ul class="nav navbar-nav">
-                    <li><a href="#/regions">By Regions<!-- Get me somewhere --></a></li>
-                    <li><a href="#/atoz">From A-Z<!-- Get me somewhere --></a></li>
-                    <li><a href="#/maps">Maps <!-- Get me somewhere --></a></li>
-		    <li><a href="#" class="btn-search">Search</a></li>
+                    <li><a href="#/regions" class="list" id="regions">By Regions<!-- Get me somewhere --></a></li>
+                    <li><a href="#/atoz" id="atoz">From A-Z<!-- Get me somewhere --></a></li>
+                    <li><a href="#/maps" id="maps">Maps <!-- Get me somewhere --></a></li>
+                    <li><a href="#" class="btn-search">Search</a></li>
                     <li class="autocomplete">
                         <input class="tb-pattern" type="text" size="25" />
                         <ul class="suggestions-list">
@@ -78,10 +89,10 @@
                     <!-- if USER not Logged -->
                     <li><a href="#/login" id="loginBtn"><span class="glyphicon glyphicon-log-in"></span> Log In</a></li>
                     <li><a href="#/register" id="registerBtn"><span class="glyphicon glyphicon-user"></span> Register</a></li>
-                    <!-- if USER is Logged -->        
+                    <!-- if USER is Logged -->
                     <li><a href="#/user" id="currentUser" class="hidden"><span class="glyphicon glyphicon-user"> Hello</span></a></li>
                     <li><a href="#/home" id="logoutBtn" class="hidden"><span class="glyphicon glyphicon-log-out"> Logout</span></a></li>
-                 
+
                 </ul>
             </div>
         </div>
@@ -98,21 +109,24 @@
 
 
         <div id="forkme">
-        <a href="https://github.com/Team-Gargoyle/Explore-The-World#fork-destination-box" target="_blank">Fork this on GitHub</a>
+            <a href="https://github.com/Team-Gargoyle/Explore-The-World#fork-destination-box" target="_blank">Fork this on GitHub</a>
         </div>
-        <div id="fbme">
-        <a href="http://www.facebook.com" target="_blank">Share on Facebook</a>
-        </div>
+        <div id="fbme" data-href="https://explore-the-world-8e0a0.firebaseapp.com/">
+            <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fexplore-the-world-8e0a0.firebaseapp.com%2F&amp;src=sdkpreparse">
+                Share on Facebook
+            </a>
+        </div>   
     </footer>
 
-    
+
 
     <script>
         System.import("index");
         firebase.initializeApp(config);
     </script>
-	
+
     <script src="app-modules/search-autocomplete.js">
+
     </script>
 
     <script>
@@ -127,7 +141,8 @@
     </script>
 
     <script src="https://maps.googleapis.com/maps/api/js?callback=myMap">
-	</script>
+
+    </script>
 </body>
 
 </html>
