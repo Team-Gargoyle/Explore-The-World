@@ -146,3 +146,34 @@ select {
     font-size: 20px;
 }
 
+.autocomplete {
+    position: fixed;
+    top: 10px;
+}
+
+.suggestions-list {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: white;
+    z-index: 1;
+}
+
+.suggestions-list .suggestion {
+    border-top: 1px solid black;
+    text-align: center;
+    padding: 5px 15px;
+}
+
+.suggestion-link {
+    text-decoration: none;
+    color: black;
+}
+
+.suggestion-link:hover {
+    text-decoration: underline;
+}
