@@ -33,6 +33,7 @@ firebase.auth().onAuthStateChanged(function (user) {
             .on('click', () => logoutController(currentUser));
         $('#loginBtn').addClass('hidden');
         $('#registerBtn').addClass('hidden');
+        
         $('#regions').removeClass('hidden');
         $('#atoz').removeClass('hidden');
         $('#maps').removeClass('hidden');

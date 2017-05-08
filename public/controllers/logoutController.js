@@ -9,7 +9,7 @@ const logoutController = function (user) {
                 $('#logoutBtn').addClass('hidden');
                 $('#loginBtn').removeClass('hidden');
                 $('#registerBtn').removeClass('hidden');
-
+        
                 toastr.options.positionClass = 'toast-top-center';
                 toastr.options.preventDuplicates = true;
                 toastr.options.closeButton = true;
