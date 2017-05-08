@@ -9,13 +9,19 @@ const logoutController = function (user) {
                 $('#logoutBtn').addClass('hidden');
                 $('#loginBtn').removeClass('hidden');
                 $('#registerBtn').removeClass('hidden');
-        
+                $('#regions').removeClass('hidden');
+                $('#atoz').removeClass('hidden');
+                $('#maps').removeClass('hidden');
+
                 toastr.options.positionClass = 'toast-top-center';
                 toastr.options.preventDuplicates = true;
                 toastr.options.closeButton = true;
 
                 toastr.success(`You've logged out!`);
                 location.hash = '/home';
+                (function reload() {
+                    setTimeout(location.reload(true), 500);
+                })();
             })
             .catch(function (error) {
                 const errorCode = error.code;

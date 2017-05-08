@@ -28,9 +28,9 @@ const loginController = function (user) {
                             toastr.success(`You're logged in as ${usr.displayName}`);
 
                             location.hash = '/home';
-                            function reload() {
-                                setTimeout(location.reload(true), 1000);
-                            }
+                            (function reload() {
+                                setTimeout(location.reload(true), 500);
+                            })();
                         },
                         function (error) {
                             toastr.options.positionClass = 'toast-top-center';
