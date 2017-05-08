@@ -43,6 +43,7 @@ SystemJS.config({
         //database
         "countriesDatabase": "../database/countriesDatabase.js",
     
-        "toastr": "../node_modules/toastr/toastr.js"
+        "toastr": "../node_modules/toastr/toastr.js",
+        "tests": "../tests/tests.js"
     }
 });

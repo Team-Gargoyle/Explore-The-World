@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Explore The World Tests</title>
+    <link rel="shortcut icon" type="image/png" href="../images/favicon.png">
+    <link rel="stylesheet" href="../node_modules/mocha/mocha.css"/>
+</head>
+<body>
+<div id="mocha"></div>
+<script src="../node_modules/mocha/mocha.js"></script>
+<script src="../node_modules/chai/chai.js"></script>
+<script src="../node_modules/sinon/pkg/sinon.js"></script>
+<script src="../node_modules/sinon-chai/lib/sinon-chai.js"></script>
+
+<script src="../node_modules/systemjs/dist/system.js"></script>
+<script src="../config/system.config.js"></script>
+<script src="../node_modules/jquery/dist/jquery.js"></script>
+
+<script>
+    SystemJS.import('tests');
+</script>
+</body>
+</html>
