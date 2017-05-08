@@ -8,7 +8,7 @@ const mapsController = function () {
     mainEl.innerHTML = `
     <div class="row">
     <div class="col-sm-3">
-        <select name="countries" size ="20" autofocus>
+        <select name="countries" size ="29" autofocus>
         
         <option>Afghanistan</option><option>Åland Islands</option><option>Albania</option><option>Algeria</option><option>American Samoa</option>
         <option>Andorra</option><option>Angola</option><option>Anguilla</option><option>Antarctica</option><option>Antigua and Barbuda</option>

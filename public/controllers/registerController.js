@@ -1,4 +1,4 @@
-import {templates} from 'templates';
+import { templates } from 'templates';
 
 const registerController = function () {
     templates.getPage('register', {})
@@ -11,11 +11,16 @@ const registerController = function () {
 
             $registerBtn.on('click', () => {
                 if ($email.val() && $pass.val()) {
-                    
+
                     const user = firebase.auth().createUserWithEmailAndPassword($email.val(), $pass.val())
                         .catch(function (error) {
                             const errorCode = error.code;
                             const errorMessage = error.message;
+
+                            toastr.options.positionClass = 'toast-top-center';
+                            toastr.options.preventDuplicates = true;
+                            toastr.options.closeButton = true;
+
                             toastr.error(`There was an error: ${errorCode} - ${errorMessage}
                         Please try again.`);
                         });
@@ -25,16 +30,25 @@ const registerController = function () {
                             displayName: $username.val()
                         })
                             .then(() => {
+
+                                toastr.options.positionClass = 'toast-top-center';
+                                toastr.options.preventDuplicates = true;
+                                toastr.options.closeButton = true;
+
                                 toastr.success(`You have successfully registered as ${$username.val()}`);
                                 location.hash = '/home';
-                                location.reload();
+                                location.reload(true);
                             });
                     });
                 } else {
+                    toastr.options.positionClass = 'toast-top-center';
+                    toastr.options.preventDuplicates = true;
+                    toastr.options.closeButton = true;
+
                     toastr.error('Fill all the fields!');
                 }
             });
         });
 };
 
-export {registerController};
+export { registerController };
