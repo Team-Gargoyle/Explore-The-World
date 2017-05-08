@@ -37,19 +37,69 @@ const atozController = function () {
                     region: region,
                     nativeName: nativeName
                 };
-                
+
                 allCountriesArr.push(countryObj);
                 
             });
-            
+
             loadCountries(allCountriesArr);
+            console.log('loaded');
+            srch();
+           
+        
+   
         });
-        //.catch(err => reject(error));
+    //.catch(err => reject(error));
 };
 
-function loadCountries (data) { 
-        templates.getPage('country', data);
+function loadCountries(data) {
+    templates.getPage('country', data);
 }
 
+function solve() {
+    return function (selector, suggestionsArray) {
+
+        let selectedElement = document.querySelector(selector); //.autocomplete
+
+        let textBoxPattern = selectedElement.getElementsByClassName("tb-pattern")[0]; //input
+
+        let allCountries = Array.from(document.getElementsByClassName('country'));
+
+
+        textBoxPattern.addEventListener("input", function (event) {
+            var textBoxInput = textBoxPattern.value.toLowerCase();
+            //console.log(Array.isArray(allCountries)); true
+            if (textBoxInput !== undefined) {
+
+                for (var i = 0; i < allCountries.length; i++) {
+                    var currentSearch = allCountries[i].firstElementChild.innerHTML.toLowerCase(); // "Agff"
+                    var currenEl = allCountries[i].firstElementChild;
+                    
+                    if (currentSearch.indexOf(textBoxInput) !== -1) {
+                        currenEl.parentElement.style.display = "";
+                    }
+                    else {
+                        currenEl.parentElement.style.display = "none";
+                    }
+                    if (textBoxInput === "") {
+                        currenEl.parentElement.style.display = "none";
+                    }
+                };
+            }
+        });
+
+    };
+}
+
+var srch = function () {
+            console.log('hello');
+            var name;
+            var nameVal;
+
+            $.getJSON('../database/countriesNamesArray.json', { name: nameVal }, function (data) {
+                
+                solve()(".autocomplete", data);
+            });
+        };
 
 export { atozController };

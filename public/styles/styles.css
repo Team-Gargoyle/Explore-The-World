@@ -147,10 +147,6 @@ select {
     font-size: 20px;
 }
 
-.autocomplete {
-    position: fixed;
-    top: 10px;
-}
 
 .suggestions-list {
     position: absolute;
