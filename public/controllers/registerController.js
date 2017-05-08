@@ -9,7 +9,8 @@ const registerController = function () {
             const $email = $('#tb-email');
             const $pass = $('#tb-password');
 
-            $registerBtn.on('click', () => {
+            $registerBtn.on('click', event => {
+                event.preventDefault();
                 if ($email.val() && $pass.val()) {
 
                     const user = firebase.auth().createUserWithEmailAndPassword($email.val(), $pass.val())

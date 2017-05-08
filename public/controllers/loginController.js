@@ -9,7 +9,8 @@ const loginController = function (user) {
             const $email = $('#tb-email');
             const $pass = $('#tb-password');
 
-            $loginBtn.on('click', () => {
+            $loginBtn.on('click', event => {
+                event.preventDefault();
                 if ($email.val() && $pass.val()) {
                     const user = firebase.auth().signInWithEmailAndPassword($email.val(), $pass.val());
 
