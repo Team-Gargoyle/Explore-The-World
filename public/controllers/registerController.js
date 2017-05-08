@@ -31,7 +31,6 @@ const registerController = function () {
                             displayName: $username.val()
                         })
                             .then(() => {
-
                                 toastr.options.positionClass = 'toast-top-center';
                                 toastr.options.preventDuplicates = true;
                                 toastr.options.closeButton = true;

@@ -30,9 +30,12 @@ firebase.auth().onAuthStateChanged(function (user) {
 
         $('#currentUser').removeClass('hidden').text(`Hello, ${currentUser.displayName}!`);
         $('#logoutBtn').removeClass('hidden')
-            .on('click',  () => logoutController(currentUser));
+            .on('click', () => logoutController(currentUser));
         $('#loginBtn').addClass('hidden');
         $('#registerBtn').addClass('hidden');
+        $('#regions').removeClass('hidden');
+        $('#atoz').removeClass('hidden');
+        $('#maps').removeClass('hidden');
     }
 });
 

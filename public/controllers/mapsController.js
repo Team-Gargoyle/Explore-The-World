@@ -98,5 +98,4 @@ function myMap(lat, lng) {
     var map = new google.maps.Map(mapCanvas, mapOptions);
 }
 
-
 export { mapsController };

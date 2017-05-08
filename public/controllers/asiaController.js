@@ -46,7 +46,6 @@ const asiaController = function () {
             
             loadCountries(allCountriesArray); 
         });
-        //.catch(err => reject(error));
 };
 
 function loadCountries (data) { 

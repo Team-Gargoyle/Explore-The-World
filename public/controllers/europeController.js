@@ -45,7 +45,6 @@ const europeController = function () {
             
             loadCountries(allCountriesArray);
         });
-        //.catch(err => reject(error));
 };
 
 function loadCountries (data) { 

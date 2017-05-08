@@ -119,6 +119,7 @@ select {
   font-size: 30px;
   width: 80%;
   margin: 100px auto 320px;
+  text-align: center;
 }
 
 #forkme a {
@@ -146,7 +147,6 @@ select {
     padding: 5px 20px;
     font-size: 20px;
 }
-
 
 .suggestions-list {
     position: absolute;
@@ -209,5 +209,14 @@ select {
 #logoutBtn {
   color: #ffffff;
 }
+
+.autocomplete {
+  margin: 10px auto;
+  border: 0.5px solid gray;
+  border-radius: 5px;
+  width: 70%;
+}
+
+
 
 /* end of custom navbar */

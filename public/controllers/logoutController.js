@@ -25,8 +25,7 @@ const logoutController = function (user) {
                 toastr.options.preventDuplicates = true;
                 toastr.options.closeButton = true;
 
-                toastr.error(`There was an error: ${errorCode} - ${errorMessage}
-                        Please try again.`);
+                toastr.error(`There was an error: ${errorCode} - ${errorMessage} Please try again.`);
             });
     };
 };
