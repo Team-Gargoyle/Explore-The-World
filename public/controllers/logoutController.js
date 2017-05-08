@@ -14,7 +14,7 @@ const logoutController = function (user) {
                 toastr.options.preventDuplicates = true;
                 toastr.options.closeButton = true;
 
-                toastr.success(`You have successfully logged out!`);
+                toastr.success(`You've logged out!`);
                 location.hash = '/home';
             })
             .catch(function (error) {

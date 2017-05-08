@@ -11,7 +11,6 @@ const loginController = function (user) {
 
             $loginBtn.on('click', () => {
                 if ($email.val() && $pass.val()) {
-
                     const user = firebase.auth().signInWithEmailAndPassword($email.val(), $pass.val());
 
                     user
@@ -25,7 +24,8 @@ const loginController = function (user) {
                             toastr.options.preventDuplicates = true;
                             toastr.options.closeButton = true;
 
-                            toastr.success(`You have successfully logged in as ${usr.displayName}`);
+                            toastr.success(`You're logged in as ${usr.displayName}`);
+
                             location.hash = '/home';
                             function reload() {
                                 setTimeout(location.reload(true), 1000);
@@ -37,14 +37,14 @@ const loginController = function (user) {
                             toastr.options.closeButton = true;
 
                             toastr.error(`There was an error: ${error.message}
-                        Please try again.`);
+                                            Please try again!`);
                         });
                 } else {
                     toastr.options.positionClass = 'toast-top-center';
                     toastr.options.preventDuplicates = true;
                     toastr.options.closeButton = true;
 
-                    toastr.error('Fill all the fields!');
+                    toastr.error('Empty fields!');
                 }
             });
         });
