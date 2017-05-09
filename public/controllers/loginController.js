@@ -31,6 +31,9 @@ const loginController = function (user) {
                             (function reload() {
                                 setTimeout(location.reload(true), 500);
                             })();
+
+                            var dateTime = new Date();
+                            localStorage.setItem('date', dateTime);
                         },
                         function (error) {
                             toastr.options.positionClass = 'toast-top-center';

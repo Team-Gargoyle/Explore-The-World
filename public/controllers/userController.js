@@ -1,8 +1,19 @@
 import { templates } from 'templates';
 
 const userController = function () {
-        templates.getPage('user', {})
-        .done();
+       
+        var data = localStorage.getItem('date');
+
+        let dataObj = {
+               data: data 
+        };
+
+        loadTime(dataObj);
 };
+
+
+function loadTime (data) { 
+        templates.getPage('user', data);
+}
 
 export { userController };

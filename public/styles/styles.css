@@ -224,3 +224,9 @@ select {
 .hidden-name {
   color: #f7f6f2;
 }
+
+.user-logged{
+  margin: 50px auto;
+  text-align: center;
+  padding-bottom:200px;
+}

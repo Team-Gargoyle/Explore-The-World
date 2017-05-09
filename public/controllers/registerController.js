@@ -38,6 +38,9 @@ const registerController = function () {
                                 toastr.success(`You have successfully registered as ${$username.val()}`);
                                 location.hash = '/home';
                                 location.reload(true);
+                                
+                                var dateTime = new Date();
+                                localStorage.setItem('date', dateTime);
                             });
                     });
                 } else {
