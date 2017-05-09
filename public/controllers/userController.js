@@ -1,10 +1,8 @@
-import {templates} from 'templates';
+import { templates } from 'templates';
 
-const userController = function (user) {
-    if (user) {
-        templates.getPage('user', user)
+const userController = function () {
+        templates.getPage('user', {})
         .done();
-    }
 };
 
-export {userController};
+export { userController };

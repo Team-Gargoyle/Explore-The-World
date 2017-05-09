@@ -76,13 +76,13 @@ const mapsController = function () {
             $("select option:selected").each(function () {
                 name += $(this).text() + " ";
             });
-            
+
             countriesDatabase.getCountryByName(name)
-                .then(countries => { 
+                .then(countries => {
                     countries.forEach(country => {
                         let lat = country.latlng[0],
                             lng = country.latlng[1];
- 
+
                         myMap(lat, lng);
                     });
                 });

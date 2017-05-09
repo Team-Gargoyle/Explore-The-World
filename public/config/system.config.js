@@ -7,6 +7,7 @@ SystemJS.config({
 
         //jquery
         "jquery": "../node_modules/jquery/dist/jquery.js",
+        
         //for HTML rendering:
         "handlebars": "../node_modules/handlebars/dist/handlebars.js",
 

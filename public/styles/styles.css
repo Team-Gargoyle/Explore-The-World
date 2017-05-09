@@ -220,3 +220,7 @@ select {
 
 
 /* end of custom navbar */
+
+.hidden-name {
+  color: #f7f6f2;
+}

@@ -50,7 +50,7 @@ const atozController = function () {
 };
 
 function loadCountries(data) {
-    templates.getPage('country', data);
+    templates.getPage('atoz', data);
 }
 
 function sorting() {
